@@ -2,19 +2,18 @@
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "target": "es6",
     "baseUrl": "./src",
-    "rootDirs": [
-      "./src",
-      "index.ts"
-    ],
+    "rootDir": "./src",
     "outDir": "./dist",
+    "strict": true,
     "sourceMap": true,
     "noImplicitAny": true,
-    "strictFunctionTypes": true
+    "strictFunctionTypes": true,
   },
   "include": [
-    "src/**/*.ts",
-    "index.ts"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
