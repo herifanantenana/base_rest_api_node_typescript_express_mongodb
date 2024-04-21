@@ -1,5 +1,6 @@
 import { server, port } from "./api/server";
+import { connectToMongoDB } from "./core/database";
 
-server.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+connectToMongoDB();
+
+server.listen(port);
