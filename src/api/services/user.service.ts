@@ -1,4 +1,4 @@
-import { UserModel } from "api/models/user.model";
+import { UserModel } from "../models/user.model";
 
 export const getUsers = () => {
   return UserModel.find();
