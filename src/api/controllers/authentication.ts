@@ -1,4 +1,4 @@
-import { createUser, getUserByEmail } from "../services/user.service";
+import { createUser, getUserByEmail } from "../services/user";
 import { Request, Response} from "express";
 import { authentication, random } from "../helpers";
 
@@ -55,7 +55,7 @@ export const login = async (req: Request, res: Response) => {
     user.authentication.sessionToken = authentication(salt, user._id.toString());
     await user.save();
 
-    res.cookie("sessionToken", user.authentication.sessionToken, {
+    res.cookie("secret", user.authentication.sessionToken, {
       domain: "localhost"
     });
 

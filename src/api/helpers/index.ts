@@ -6,6 +6,6 @@ export const random = () => {
 
 export const authentication = (salt: string, password: string) => {
   return crypto.createHmac("sha256", [salt, password].join('/'))
-    .update(process.env.SECRET || "")
+    .update("secret")
     .digest("hex")
 }

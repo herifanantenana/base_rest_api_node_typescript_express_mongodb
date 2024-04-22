@@ -1,4 +1,4 @@
-import { UserModel } from "../models/user.model";
+import { UserModel } from "../models/user";
 
 export const getUsers = () => {
   return UserModel.find();
@@ -9,7 +9,7 @@ export const getUserByEmail = (email: string) => {
 }
 
 export const getUserBySessionToken = (sessionToken: string) => {
-  return UserModel.findOne({ "authentication.sessimToken": sessionToken });
+  return UserModel.findOne({ "authentication.sessionToken": sessionToken });
 }
 
 export const getUserById = (id: string) => {
